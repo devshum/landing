@@ -1,0 +1,50 @@
+.services {
+  // &__panel {
+  //   display: flex;
+  //   align-items: center;
+  // }
+
+  // &__swiper-tabs {
+  //   flex: 0 0 46.1rem
+  // }
+  
+  // &__swiper-panels {
+  //   flex: 1;
+  // }
+
+  &__tabs {
+    margin-bottom: 4rem;
+  }
+
+  &__tab {
+    padding: 1.6rem 4rem;
+    line-height: 4rem;
+    border: unset;
+    background: unset;
+    cursor: pointer;
+    border: 0.1rem solid transparent;
+    transition: $transition;
+    font-size: inherit;
+    font-weight: 500;
+
+    &:hover {
+      border: 0.1rem solid $gray-light;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.6rem;
+    }
+
+    &.active {
+      border: 0.1rem solid $primary;
+    }
+  }
+
+  &__swiper-tabs {
+    .swiper-wrapper {
+      transform: unset !important;
+      flex-direction: column;
+    }
+  }
+}
+

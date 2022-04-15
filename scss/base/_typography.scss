@@ -1,0 +1,53 @@
+body {
+  line-height: 3.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  color: $primary;
+  text-rendering: optimizeLegibility
+};
+
+.h-primary {
+  color: $white;
+  text-transform: uppercase;
+
+  &--small {
+    font-size: 5.6rem;
+    line-height: 6.7rem;
+  }
+
+  &--big {
+
+  }
+}
+
+.h-secondary {
+  font-size: 4.8rem;
+  line-height: 6rem;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 2.4rem;
+  line-height: 3.8rem;
+  font-weight: 500;
+  color: $white;
+}
+
+.section-description {
+  display: inline-block;
+  font-size: 1.8rem;
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06rem;
+}
+
+.section-paragraph {
+  font-size: 2rem;
+
+  span {
+    font-weight: 700;
+  }
+}
+

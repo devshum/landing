@@ -1,0 +1,54 @@
+.industries {
+  &__info {
+    margin-bottom: 7.2rem;
+  }
+
+  &__swiper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__pagination {
+    color: $gray-light-10;
+    width: max-content;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 65.3rem repeat(2, 1fr);
+    column-gap: 4rem;
+  }
+
+  &__desc {
+    grid-column: 1 / -1;
+  }
+
+  &__list {
+    li {
+      margin-bottom: 3.2rem;
+      font-size: 2.4rem;
+      white-space: nowrap;
+    }
+  }
+
+  &__slider {
+    background-color: $primary;
+  }
+
+  &__quote {
+    color: $white;
+    margin-top: 4rem;
+
+    blockquote {
+      column-count: 2;
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+    }
+
+    figcaption {
+      margin-top: 3.2rem;
+    }
+  }
+
+}

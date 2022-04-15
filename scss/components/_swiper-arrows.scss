@@ -1,0 +1,42 @@
+.swiper-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  height: 4rem;
+  width: 14.4rem;
+
+  &__prev,
+  &__next {
+    width: 3.8rem;
+    height: 2.4rem;
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+      opacity: 0.5;
+      cursor: default
+    }
+
+    &::after {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__prev {
+      &::after {
+        content: '';
+        background: url("/img/icons/arr-left.png") no-repeat;
+      }
+    }
+
+  &__next {
+    &::after {
+      content: '';
+      background: url("/img/icons/arr-right.png") no-repeat;
+    }
+  }
+}
+

@@ -1,0 +1,121 @@
+.hero {
+  background-color: $primary;
+
+  padding: calc(6.8rem + 8rem) 0 7.2rem;
+
+  &__container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__title {
+    width: 68rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &__paragraph {
+    width: 72.7rem;
+  }
+
+  &__paragraph {
+    margin-left: auto;
+  }
+
+  &__bottom {
+    display: grid;
+    column-gap: 5.6rem;
+    margin-top: 7.2rem;
+
+    animation: moveFromBottom .5s ease-out;
+
+    div {
+      display: grid;
+
+      &:nth-child(1) {
+        grid-template-rows: 16.8rem;
+        grid-template-columns: 16.8rem;
+
+        @include tablet {
+          grid-template-rows: 8.75vw;
+          grid-template-columns: 8.75vw;
+        }
+     
+        .hero__square {
+          grid-row: 2;
+        }
+      }
+      
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        grid-template-rows: repeat(2, 16.8rem);
+        grid-template-columns: repeat(2, 16.8rem);
+
+        @include tablet {
+          grid-template-rows: 8.75vw;
+          grid-template-columns: 8.75vw;
+        }
+      }
+
+      &:nth-child(1) {
+       .hero__square {
+         background-color: $red;
+       }
+      }
+ 
+      &:nth-child(2) {
+      
+        grid-column: 2;
+
+        .hero__square {
+          background-color: $yellow;
+
+          &:nth-child(1) {
+            grid-column: 2;
+          }
+
+          &:nth-child(2) {
+            grid-column: 1;
+          }
+        }
+      }
+ 
+      &:nth-child(3) {
+        grid-column: 3;
+
+        .hero__square {
+          background-color: $green;
+
+          &:nth-child(3) {
+            grid-row: 2;
+            grid-column: 1;
+          }
+        }
+      }
+ 
+      &:nth-child(4) {
+        grid-column: 4;
+
+        .hero__square {
+          background-color: $blue;
+
+          &:nth-child(3) {
+            grid-row: 2;
+            grid-column: 1;
+          }
+
+          &:nth-child(4) {
+            grid-row: 2;
+            grid-column: 2;
+          }
+        }
+      }
+    }
+  }
+
+  &__square {
+   width: 100%;
+   height: 100%;
+  }
+}

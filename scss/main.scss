@@ -1,0 +1,44 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/animations";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/btn";
+@import "components/swiper-arrows";
+
+@import "layouts/header";
+@import "layouts/wrapper";
+@import "layouts/about";
+@import "layouts/services";
+@import "layouts/hero";
+@import "layouts/container";
+@import "layouts/industries";
+
+.cursor{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(1);
+  background-color: white;
+  mix-blend-mode: difference;
+  transition-timing-function: ease-out;
+  transition-duration: 50ms;
+}
+
+.cursor2{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transform: scale(3);
+  background-color: gray;
+  opacity: 0.5;
+  transition-timing-function: ease-out;
+  transition-duration: 200ms;
+}
+
+

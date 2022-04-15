@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: 8rem;
+
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  &--white {
+    .header {
+      &__item a {
+        color: $white;
+
+        &:hover {
+          border-bottom: 0.1rem solid $white;
+        }
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    svg {
+      display: block;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+  }
+
+  &__item {
+    margin-right: 5.6rem;
+   
+    a {
+      border-bottom: 0.1rem solid transparent;
+      transition: $transition;
+    }
+  }
+}

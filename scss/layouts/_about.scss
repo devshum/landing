@@ -1,0 +1,30 @@
+.about {
+  // padding-bottom: 18.2rem;
+  
+  &__title {
+    width: 99.8rem;
+    margin-bottom: 3.2rem;
+  }
+
+  &__text-block {
+    display: grid;
+    grid-template-columns: 61.2rem 1fr;
+    column-gap: 4rem;
+    margin-bottom: 6.4rem;
+  }
+
+  &__companies {
+    display: flex;
+    align-items: center;
+  }
+
+  &__company {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0.1rem solid $gray-light;
+    height: 13.8rem;
+    flex: 1;
+  }
+}
