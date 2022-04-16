@@ -33,3 +33,30 @@
 
   &--arrow {}
 }
+
+.text-btn {
+  display: flex;
+  align-items: center;
+  color: $white;
+
+  &:hover {
+    span {
+      border-bottom: 0.1rem solid $white;
+    }
+
+    svg {
+      transform: translateX(0.5rem);
+    }
+  }
+
+  span,
+  svg {
+    transition: $transition;
+  }
+
+  span {
+    font-weight: 500;
+    margin-right: 2.1rem;
+    border-bottom: 0.1rem solid transparent;
+  }
+}
