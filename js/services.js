@@ -29,8 +29,8 @@ init(tabLabels, tabPanels)
 
 //
 
-const tabDigitalLabels = [...document.querySelectorAll('#digital-tab')]
-const tabDigitalPanels = [...document.querySelectorAll('#digital-panel')]
+const tabDigitalLabels = [...document.querySelectorAll('.digital-tab')]
+const tabDigitalPanels = [...document.querySelectorAll('.digital-panel')]
 
 tabDigitalLabels.forEach((label, index) => label.addEventListener('click', () => {
   removeActiveClasses(tabDigitalLabels)
@@ -42,8 +42,8 @@ init(tabDigitalLabels, tabDigitalPanels)
 
 //
 
-const tabInfraLabels = [...document.querySelectorAll('#infra-tab')]
-const tabInfraPanels = [...document.querySelectorAll('#infra-panel')]
+const tabInfraLabels = [...document.querySelectorAll('.infra-tab')]
+const tabInfraPanels = [...document.querySelectorAll('.infra-panel')]
 
 tabInfraLabels.forEach((label, index) => label.addEventListener('click', () => {
   removeActiveClasses(tabInfraLabels)
