@@ -8,6 +8,9 @@
     font-size: inherit;
     cursor: pointer;
     transition: $transition;
+    border: unset;
+    background: unset;
+    border: 0.2rem solid transparent;
   }
 
   &--white {
@@ -21,7 +24,14 @@
   }
 
   &--black {
-    color: $black;
+    background-color: $primary;
+    color: $white;
+
+    &:hover {
+      border: 0.2rem solid $primary;
+      background-color: $white;
+      color: $primary;
+    }
   }
 
   &--small {
@@ -29,7 +39,31 @@
     height: 4.8rem;
   }
 
-  &--big {}
+  &--big {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1.6rem 4.7rem 1.6rem 4rem;
+    height: 7.2rem;
+    line-height: 4rem;
+    font-weight: 500;
+
+    &:hover {
+      svg {
+        transform: translateX(0.3rem);
+
+        path {
+          fill: $primary;
+        }
+      }
+    }
+
+    svg {
+      margin-left: 2.9rem;
+      transition: $transition;
+    }
+  }
 
   &--arrow {}
 }
