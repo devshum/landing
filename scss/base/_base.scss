@@ -22,6 +22,11 @@ a {
   text-decoration: none;
 }
 
-section {
+
+.section {
   height: 100vh;
+
+  &--dark {
+    background-color: $primary;
+  }
 }

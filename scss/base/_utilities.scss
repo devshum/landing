@@ -1,14 +1,22 @@
-// .mb-24 {
-//   margin-bottom: 2.4rem;
-// }
+.bg {
+  &::after {
+    content: '';
+    background: linear-gradient(0deg, rgba(5, 5, 13, 0.6), rgba(5, 5, 13, 0.6));
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+}
 
-// .section {
-//   border-right: 0.1rem solid $gray;
-//   position: relative;
-
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     right: 0;
-//   }
-// }
+.b-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
