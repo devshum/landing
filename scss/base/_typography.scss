@@ -35,6 +35,11 @@ body {
   font-size: 3.2rem;
   line-height: 4.4rem;
   color: $white;
+  
+
+  &--black {
+    color: $primary;
+  }
 }
 
 .paragraph {

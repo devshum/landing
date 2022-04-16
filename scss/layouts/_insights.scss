@@ -1,0 +1,18 @@
+.insights {
+  &__title {
+    max-width: 99.8rem;
+  }
+
+  &__swiper {
+    width: 100%;
+  }
+
+  &__date {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__read-more {
+    line-height: 4rem;
+  }
+}
