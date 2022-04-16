@@ -1,41 +1,80 @@
 .swiper-arrows {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 
   position: relative;
-  height: 4rem;
+  height: 4.8rem;
   width: 14.4rem;
 
   &__prev,
   &__next {
-    width: 3.8rem;
-    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 5.6rem;
+    height: 100%;
     cursor: pointer;
+    transition: $transition;
 
     &.swiper-button-disabled {
       opacity: 0.5;
       cursor: default
     }
 
-    &::after {
+    &:hover {
+      &::after,
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &::after,
+    &::before {
+      opacity: 0.75;
       display: block;
-      height: 100%;
-      width: 100%;
+      height: 2.2rem;
+      width: 3.8rem;
+      transition: $transition;
     }
   }
 
   &__prev {
+    &::after {
+      content: '';
+      background: url("/img/icons/arr-left.png") no-repeat;
+    }
+
+    &--black {
+      background-color: rgba($primary, 0.01);
+
+      &:hover {
+        background-color: rgba($primary, 0.1);
+      }
+
       &::after {
-        content: '';
-        background: url("/img/icons/arr-left.png") no-repeat;
+        background: url("/img/icons/arr-left--black.png") no-repeat;
       }
     }
+  }
 
   &__next {
     &::after {
       content: '';
       background: url("/img/icons/arr-right.png") no-repeat;
+    }
+
+    &--black {
+      background-color: rgba($primary, 0.01);
+
+      &:hover {
+        background-color: rgba($primary, 0.1);
+      }
+
+      &::after {
+        background: url("/img/icons/arr-right--black.png") no-repeat;
+      }
     }
   }
 }
