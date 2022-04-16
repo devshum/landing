@@ -25,8 +25,10 @@ ul {
 a {
   text-decoration: none; }
 
-section {
+.section {
   height: 100vh; }
+  .section--dark {
+    background-color: #05050D; }
 
 body {
   line-height: 3.2rem;
@@ -50,6 +52,11 @@ body {
   .h-secondary--white {
     color: #ffffff; }
 
+.h-tertiary {
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  color: #ffffff; }
+
 .paragraph {
   font-size: 2.4rem;
   line-height: 3.8rem;
@@ -63,11 +70,32 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06rem; }
+  .section-description--white {
+    color: #ffffff; }
 
 .section-paragraph {
   font-size: 2rem; }
   .section-paragraph span {
     font-weight: 700; }
+
+.bg::after {
+  content: '';
+  background: linear-gradient(0deg, rgba(5, 5, 13, 0.6), rgba(5, 5, 13, 0.6));
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+.b-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; }
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;
@@ -166,7 +194,7 @@ body {
 .wrapper {
   padding-top: 7.2rem;
   height: 100%; }
-  .wrapper--grid {
+  .wrapper--center {
     display: grid;
     align-content: center; }
 
@@ -262,21 +290,6 @@ body {
     visibility: visible;
     transform: translateY(0); }
   .services__content-panel::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(5, 5, 13, 0.6), rgba(5, 5, 13, 0.6));
-    z-index: -1; }
-  .services__content-panel img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     z-index: -1; }
 
 .services__content-title {
@@ -292,7 +305,6 @@ body {
       margin-bottom: 2.4rem; }
 
 .hero {
-  background-color: #05050D;
   padding: calc(6.8rem + 8rem) 0 7.2rem; }
   .hero__container {
     display: grid;
@@ -366,6 +378,9 @@ body {
   height: 100%;
   width: 100%;
   z-index: 1; }
+  .container--center {
+    display: grid;
+    align-content: center; }
   .container--border-hero {
     position: relative; }
     .container--border-hero::after, .container--border-hero::before {
@@ -381,26 +396,27 @@ body {
       right: 0; }
     .container--border-hero::before {
       left: 22.3rem; }
-  .container--border-circle {
+  .container--circle::after {
+    border-radius: 50%;
+    width: 42.1rem;
+    height: 42.1rem;
+    right: 0;
+    background-color: transparent;
+    border: 0.1rem solid #23232A; }
+  .container--circle::before {
+    background-color: #23232A; }
+  .container--border {
     padding: 7.2rem 0 9.6rem;
     border-left: 0.1rem solid #23232A;
     border-right: 0.1rem solid #23232A; }
-    .container--border-circle::before, .container--border-circle::after {
+    .container--border::before, .container--border::after {
       content: '';
       position: absolute;
-      background-color: #23232A;
       top: 0; }
-    .container--border-circle::before {
+    .container--border::before {
       height: 100%;
       width: 0.1rem;
       right: 41.9rem; }
-    .container--border-circle::after {
-      border-radius: 50%;
-      width: 42.1rem;
-      height: 42.1rem;
-      right: 0;
-      background-color: transparent;
-      border: 0.1rem solid #23232A; }
 
 .industries__info {
   margin-bottom: 7.2rem; }
@@ -440,24 +456,36 @@ body {
   .industries__quote figcaption {
     margin-top: 3.2rem; }
 
-.cursor {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  position: absolute;
-  transform: scale(1);
-  background-color: white;
-  mix-blend-mode: difference;
-  transition-timing-function: ease-out;
-  transition-duration: 50ms; }
+.studies__title {
+  width: 99.8rem; }
 
-.cursor2 {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  position: absolute;
-  transform: scale(3);
-  background-color: gray;
-  opacity: 0.5;
-  transition-timing-function: ease-out;
-  transition-duration: 200ms; }
+.studies__swiper-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 4rem; }
+
+.studies__swiper {
+  width: 100%; }
+
+.studies__article {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 43.6rem;
+  position: relative;
+  padding: 4rem; }
+
+.studies__article-title {
+  margin-bottom: 0.8rem; }
+
+.studies__btn {
+  border: unset;
+  background: unset;
+  cursor: pointer; }
+  .studies__btn:hover .studies__btn-arrow {
+    transform: translateX(0.3rem); }
+
+.studies__btn-arrow {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }

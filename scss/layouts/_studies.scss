@@ -1,0 +1,48 @@
+.studies {
+  &__title {
+    width: 99.8rem;
+  }
+
+  &__swiper-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 4rem;
+  }
+
+  &__swiper {
+    width: 100%;
+  }
+
+  &__article {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+
+    min-height: 43.6rem;
+    position: relative;
+    padding: 4rem;
+  }
+
+  &__article-title {
+    margin-bottom: 0.8rem;
+  }
+
+  &__btn {
+    border: unset;
+    background: unset;
+    cursor: pointer;
+
+    &:hover {
+      .studies__btn-arrow {
+        transform: translateX(0.3rem);
+      }
+    }
+  }
+
+  &__btn-arrow {
+    transition: $transition;
+  }
+}
