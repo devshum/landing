@@ -92,7 +92,10 @@ body {
   font-weight: 500;
   font-size: inherit;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: unset;
+  background: unset;
+  border: 0.2rem solid transparent; }
 
 .btn--white {
   color: #ffffff;
@@ -102,11 +105,32 @@ body {
     color: #000000; }
 
 .btn--black {
-  color: #000000; }
+  background-color: #05050D;
+  color: #ffffff; }
+  .btn--black:hover {
+    border: 0.2rem solid #05050D;
+    background-color: #ffffff;
+    color: #05050D; }
 
 .btn--small {
   padding: 0.4rem 3.2rem;
   height: 4.8rem; }
+
+.btn--big {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 4.7rem 1.6rem 4rem;
+  height: 7.2rem;
+  line-height: 4rem;
+  font-weight: 500; }
+  .btn--big:hover svg {
+    transform: translateX(0.3rem); }
+    .btn--big:hover svg path {
+      fill: #05050D; }
+  .btn--big svg {
+    margin-left: 2.9rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 .text-btn {
   display: flex;
@@ -532,3 +556,9 @@ body {
 
 .insights__read-more {
   line-height: 4rem; }
+
+.expertise {
+  padding: 9.6rem 0; }
+  .expertise__title {
+    margin-bottom: 4.8rem;
+    max-width: 80rem; }
