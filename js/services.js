@@ -29,42 +29,27 @@ init(tabLabels, tabPanels)
 
 //
 
-const tabContentLabels = [...document.querySelectorAll('.services__content-tab')]
-const tabContentPanels = [...document.querySelectorAll('.services__content-panel')]
+const tabDigitalLabels = [...document.querySelectorAll('#digital-tab')]
+const tabDigitalPanels = [...document.querySelectorAll('#digital-panel')]
 
-tabContentLabels.forEach((label, index) => label.addEventListener('click', () => {
-  removeActiveClasses(tabContentLabels)
-  removeActiveClasses(tabContentPanels)
-  activateTab(index, tabContentLabels, tabContentPanels)
+tabDigitalLabels.forEach((label, index) => label.addEventListener('click', () => {
+  removeActiveClasses(tabDigitalLabels)
+  removeActiveClasses(tabDigitalPanels)
+  activateTab(index, tabDigitalLabels, tabDigitalPanels)
 }))
 
-init(tabContentLabels, tabContentPanels)
+init(tabDigitalLabels, tabDigitalPanels)
 
+//
 
+const tabInfraLabels = [...document.querySelectorAll('#infra-tab')]
+const tabInfraPanels = [...document.querySelectorAll('#infra-panel')]
 
-const cursor = document.querySelector('.cursor');
-	document.addEventListener('mousemove', e => {
-		cursor.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
-	});
+tabInfraLabels.forEach((label, index) => label.addEventListener('click', () => {
+  removeActiveClasses(tabInfraLabels)
+  removeActiveClasses(tabInfraPanels)
+  activateTab(index, tabInfraLabels, tabInfraPanels)
+}))
 
-	const cursor2 = document.querySelector('.cursor2');
-	document.addEventListener('mousemove', e => {
-		cursor2.setAttribute("style", " top: "+(e.pageY -10)+"px; left: "+(e.pageX -10)+"px; ")
-	});
+init(tabInfraLabels, tabInfraPanels)
 
-  
-// var swiper = new Swiper(".services__swiper-tabs", {
-//   spaceBetween: 10,
-//   watchSlidesProgress: true
-// })
-
-// var swiper2 = new Swiper(".services__swiper-panels", {
-//   onlyExternal: true,
-//   effect: "fade",
-//   fadeEffect: {
-//     crossFade: true
-//   },
-//   thumbs: {
-//     swiper: swiper
-//   }
-// })

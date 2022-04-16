@@ -1,17 +1,4 @@
 .services {
-  // &__panel {
-  //   display: flex;
-  //   align-items: center;
-  // }
-
-  // &__swiper-tabs {
-  //   flex: 0 0 46.1rem
-  // }
-  
-  // &__swiper-panels {
-  //   flex: 1;
-  // }
-
   &__tabs {
     margin-bottom: 4rem;
   }
@@ -40,10 +27,110 @@
     }
   }
 
-  &__swiper-tabs {
-    .swiper-wrapper {
-      transform: unset !important;
-      flex-direction: column;
+  &__panels {
+    display: grid;
+
+    border: 0.1rem solid $gray-light;
+    position: relative;
+  }
+
+  &__panel {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+    grid-row: 1;
+    grid-column: 2 / -1;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__content-tabs {
+    flex: 0 0 46.1rem;
+    padding: 4rem;
+  }
+
+  &__content-tab {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    cursor: pointer;
+    transition: $transition;
+
+    &.active {
+      font-weight: 700;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__content-panels {
+    display: grid;
+    flex: 1;
+  }
+
+  &__content-panel {
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+   
+    grid-row: 1;
+    grid-column: 2 / -1;
+
+    opacity: 0;
+    position: relative;
+ 
+    visibility: hidden;
+    transition: $transition;
+    z-index: 1;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(5, 5, 13, 0.6), rgba(5, 5, 13, 0.6));
+      z-index: -1;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 3.2rem;
+  }
+
+  &__content-list {
+    color: $white;
+    margin-bottom: 7.8rem;
+
+    li {
+      font-size: 2rem;
+      line-height: 3.2rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
     }
   }
 }
