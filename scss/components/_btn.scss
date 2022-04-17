@@ -10,12 +10,12 @@
     transition: $transition;
     border: unset;
     background: unset;
-    border: 0.2rem solid transparent;
+    border: 0.1rem solid transparent;
   }
 
   &--white {
     color: $white;
-    border: 0.2rem solid $white;
+    border: 0.1rem solid $white;
 
     &:hover {
       background-color: $white;
@@ -28,7 +28,7 @@
     color: $white;
 
     &:hover {
-      border: 0.2rem solid $primary;
+      border: 0.1rem solid $primary;
       background-color: $white;
       color: $primary;
     }
@@ -72,6 +72,8 @@
   display: flex;
   align-items: center;
   color: $white;
+  cursor: pointer;
+  font-weight: 500;
 
   &:hover {
     span {
@@ -80,6 +82,25 @@
 
     svg {
       transform: translateX(0.5rem);
+    }
+  }
+
+  
+  &--black {
+    span {
+      color: $primary;
+    }
+
+    svg {
+      path {
+        fill: $primary;
+      }
+    }
+
+    &:hover {
+      span {
+        border-bottom: 0.1rem solid $primary;
+      }
     }
   }
 
