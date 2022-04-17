@@ -47,7 +47,7 @@
   }
 
   &--border {
-    padding: 7.2rem 0 9.6rem;
+    padding: calc(7.2rem + 8rem) 0 9.6rem;
     border-left: 0.1rem solid $gray;
     border-right: 0.1rem solid $gray;
 

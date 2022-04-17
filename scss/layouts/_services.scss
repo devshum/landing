@@ -1,4 +1,6 @@
 .services {
+  padding: calc(7.2rem + 8rem) 0 14.6rem;
+
   &__tabs {
     margin-bottom: 4rem;
   }
@@ -13,6 +15,7 @@
     transition: $transition;
     font-size: inherit;
     font-weight: 500;
+    height: 7.2rem;
 
     &:hover {
       border: 0.1rem solid $gray-light;

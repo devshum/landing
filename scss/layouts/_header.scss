@@ -7,13 +7,37 @@
   width: 100%;
   z-index: 2;
 
-  &--white {
+  &.fixed {
+    position: fixed;
+    background-color: $white;
+    animation: slideDown 0.5s;
+    animation-fill-mode: both;
+
+    &.slideUp {
+      animation: slideUp 0.35s;
+      animation-fill-mode: both;
+    }
+
     .header {
+      &__logo svg path {
+        fill: $primary;
+      }
+
       &__item a {
-        color: $white;
+        color: $primary;
 
         &:hover {
-          border-bottom: 0.1rem solid $white;
+          border-bottom: 0.1rem solid $primary;
+        }
+      }
+
+      &__btn {
+        border: 0.1rem solid $primary;
+        color: $primary;
+
+        &:hover {
+          background-color: $primary;
+          color: $white;
         }
       }
     }
@@ -48,8 +72,13 @@
     margin-right: 5.6rem;
    
     a {
+      color: $white;
       border-bottom: 0.1rem solid transparent;
       transition: $transition;
+
+      &:hover {
+        border-bottom: 0.1rem solid $white;
+      }
     }
   }
 }
