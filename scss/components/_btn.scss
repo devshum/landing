@@ -11,6 +11,7 @@
     border: unset;
     background: unset;
     border: 0.1rem solid transparent;
+    width: max-content;
   }
 
   &--white {
@@ -41,13 +42,18 @@
 
   &--big {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    padding: 1.6rem 4.7rem 1.6rem 4rem;
+    padding: 1.6rem 4rem;
     height: 7.2rem;
     line-height: 4rem;
     font-weight: 500;
+  }
+
+  &--arrow {
+    padding: 1.6rem 4.7rem 1.6rem 4rem;
+    justify-content: space-between;
 
     &:hover {
       svg {
@@ -64,8 +70,6 @@
       transition: $transition;
     }
   }
-
-  &--arrow {}
 }
 
 .text-btn {
@@ -111,7 +115,7 @@
 
   span {
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 2.8rem;
     margin-right: 2.1rem;
     border-bottom: 0.1rem solid transparent;
   }

@@ -1,0 +1,122 @@
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 4rem;
+  row-gap: 0.8em;
+
+  &__input-group {
+    width: 100%;
+    position: relative;
+
+    & > * {
+      width: 100%;
+    }
+
+    &--message {
+      grid-column: 1 / -1;
+
+      .form__input {
+        padding: 0 1.6rem 1rem 0;
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    transition: $transition;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.4rem;
+  }
+
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(2rem);
+  }
+
+  &__input {
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    padding: 0 1.6rem 1.6rem 0;
+    border: unset;
+    outline: unset;
+    border-bottom: 0.2rem solid $primary;
+    height: 3.2rem;
+    margin-top: 3.2rem;
+
+    &::-webkit-input-placeholder {
+      color: $gray-light-10;
+    }
+  }
+
+  &__btn {
+  }
+
+  &__privacy {
+    display: flex;
+    align-items: center;
+    grid-column: 1 / -1;
+
+    margin: 1.6rem 0 2rem 0;
+  }
+
+  
+  &__radio-input {
+    display: none;
+    font-size: inherit;
+  }
+  
+  &__radio-label {
+    cursor: pointer;
+    position: relative;
+    padding-left: 4.6rem;
+  }
+  
+  &__radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 0.5rem solid $primary;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: -.6rem;
+  
+    &::after {
+        content: "";
+        display: block;
+        height: 1.3rem;
+        width: 1.3rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $primary;
+        opacity: 0;
+        transition: opacity .2s;
+    }
+  }
+  
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }  
+
+  &__link {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: $primary;
+    border-bottom: 0.1rem solid $primary;
+    transition: $transition;
+    margin-left: 0.5rem;
+
+    &:hover {
+      color: $gray-light-10;
+      border-bottom: 0.1rem solid $gray-light-10;
+    }
+  }
+}
+

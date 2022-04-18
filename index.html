@@ -13,6 +13,104 @@
     
 </head>
 <body>
+  <figure class="pop-up opened">
+    <div class="pop-up__bg">&nbsp;</div>
+   
+    <div class="pop-up__content">
+     
+      <h2 class="pop-up__title">Get in Touch</h2>
+      <p class="pop-up__paragraph">Fill in the form below and a Trinetix representative will contact you very shortly</p>
+
+      <form action="#" class="form">
+        <div class="form__input-group">
+          <input type="text" 
+                 name="firstName"
+                 id="firstName"
+                 class="form__input"
+                 placeholder="First name" 
+                 autocomplete="off">
+
+          <label for="firstName" 
+                 class="form__label">First name</label>
+        </div>
+
+        <div class="form__input-group">
+         
+                 
+          <input type="text" 
+                 name="lastName"
+                 id="lastName"
+                 class="form__input"
+                 placeholder="Last name" 
+                 autocomplete="off">
+
+          <label for="lastName" 
+                 class="form__label">Last name</label>
+        </div>
+
+        <div class="form__input-group">
+        
+                 
+          <input type="text" 
+                 name="companyName"
+                 id="companyName"
+                 class="form__input"
+                 placeholder="Company name" 
+                 autocomplete="off">
+
+          <label for="companyName" 
+                 class="form__label">Company name</label>
+        </div>
+
+        <div class="form__input-group">
+          <input type="text" 
+                 name="email"
+                 id="email"
+                 class="form__input"
+                 placeholder="Email" 
+                 autocomplete="off">
+
+          <label for="email" 
+                 class="form__label">Email</label>
+        </div>
+
+        <div class="form__input-group form__input-group--message">
+                 
+          <textarea name="message"
+                    id="message"
+                    class="form__input"
+                    placeholder="Message" 
+                    autocomplete="off"></textarea>
+
+          <label for="message" 
+                 class="form__label">Message</label>
+
+        </div>
+
+        <div class="form__privacy">
+          <div class="form__radio-group">
+            <input type="checkbox" class="form__radio-input" id="privacy" name="isPrivacyRead">
+            <label for="privacy" class="form__radio-label">
+                <span class="form__radio-button"></span>
+                I have read and accepted
+            </label>
+          </div>
+
+          <a href="#" class="form__link">Privacy policy</a>
+        </div>
+
+        <button class="form__btn btn btn--black btn--big">Send message</button>
+      </form>
+       
+      <i class="pop-up__icon">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9793 14.0209L2.00009 25.0001L0.58588 23.5859L11.5651 12.6067L1.37268 2.41434L2.78689 1.00012L12.9793 11.1925L23.2133 0.958496L24.6275 2.37271L14.3935 12.6067L25.4143 23.6275L24.0001 25.0418L12.9793 14.0209Z" fill="#05050D"/>
+        </svg>          
+      </i>
+    </div>
+
+  </figure>
+
   <header class="header">
     <div class="header__container container">
       <a href="https://trinetix.com" class="header__logo">
@@ -534,7 +632,7 @@
           Empower your business with our technology expertise
         </h2>
   
-        <button class="btn btn--black btn--big">
+        <button class="btn btn--black btn--big btn--arrow">
           <span>Let’s get started</span>
           <svg width="37" height="15" viewBox="0 0 37 15" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M33.0859 6.50008L28.293 1.70718L29.7072 0.292969L36.2072 6.79297L36.9143 7.50008L36.2072 8.20718L29.7072 14.7072L28.293 13.293L33.0859 8.50008H9.15527e-05V6.50008H33.0859Z" fill="white"/>
@@ -620,6 +718,8 @@
       </div>
     </footer>
   </div>
+
+
   
   <!-- <script src="js/libs/anime.min.js"></script>
   <script src="js/libs/animejsPlugins.js"></script> -->
@@ -632,6 +732,7 @@
   <script src="js/studies.js"></script>
   <script src="js/insights.js"></script>
   <script src="js/header.js"></script>
+  <script src="js/popup.js"></script>
   
 
   <script>
