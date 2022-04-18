@@ -53,9 +53,6 @@
     }
   }
 
-  &__btn {
-  }
-
   &__privacy {
     display: flex;
     align-items: center;
@@ -107,7 +104,7 @@
   &__link {
     display: inline-block;
     font-weight: 500;
-    line-height: 1.6rem;
+    line-height: 1.6;
     color: $primary;
     border-bottom: 0.1rem solid $primary;
     transition: $transition;

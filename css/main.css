@@ -383,7 +383,7 @@ body {
   .form__link {
     display: inline-block;
     font-weight: 500;
-    line-height: 1.6rem;
+    line-height: 1.6;
     color: #05050D;
     border-bottom: 0.1rem solid #05050D;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -438,7 +438,8 @@ body {
     .header__item a {
       color: #ffffff;
       border-bottom: 0.1rem solid transparent;
-      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
+      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+      padding-bottom: 0.5rem; }
       .header__item a:hover {
         border-bottom: 0.1rem solid #ffffff; }
 
@@ -800,6 +801,7 @@ body {
 
 .footer__privacy {
   padding: 0 0 0.5rem;
+  line-height: 1.6;
   margin-left: 2.4rem;
   color: #05050D;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
