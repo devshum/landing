@@ -38,9 +38,12 @@ a {
   text-decoration: none; }
 
 .section {
+  position: relative;
   height: 100vh; }
   .section--dark {
     background-color: #05050D; }
+  .section--normal {
+    height: initial; }
 
 body {
   line-height: 3.2rem;
@@ -158,6 +161,7 @@ body {
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }
   .text-btn span {
     font-weight: 500;
+    line-height: 1.2;
     margin-right: 2.1rem;
     border-bottom: 0.1rem solid transparent; }
 
@@ -295,9 +299,11 @@ body {
       .header__item a:hover {
         border-bottom: 0.1rem solid #ffffff; }
 
-.wrapper--center {
-  display: grid;
-  align-content: center; }
+.wrapper {
+  height: 100%; }
+  .wrapper--center {
+    display: grid;
+    align-content: center; }
 
 .about {
   padding: calc(7.2rem + 8rem) 0 10.2rem; }
@@ -371,6 +377,7 @@ body {
     display: grid;
     flex: 1; }
   .services__content-panel {
+    background-color: #05050D;
     width: 100%;
     height: 100%;
     padding: 4rem;
@@ -380,15 +387,30 @@ body {
     position: relative;
     visibility: hidden;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    z-index: 1; }
+    z-index: 1;
+    position: relative; }
     .services__content-panel.active {
       opacity: 1;
       visibility: visible;
       transform: translateY(0); }
-    .services__content-panel::after {
+    .services__content-panel::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 0.1rem;
+      background-color: #23232A;
+      position: absolute;
+      left: 46.2rem;
+      top: 0;
       z-index: -1; }
   .services__content-title {
     margin-bottom: 3.2rem; }
+  .services__content-bg {
+    width: 26.1rem;
+    height: auto;
+    position: absolute;
+    right: 4rem;
+    bottom: 4rem; }
   .services__content-list {
     color: #ffffff;
     margin-bottom: 7.8rem; }
@@ -400,10 +422,6 @@ body {
 
 .hero {
   padding: calc(6.8rem + 8rem) 0 7.2rem; }
-  .hero__container {
-    display: grid;
-    justify-content: center;
-    align-content: center; }
   .hero__title {
     max-width: 68rem;
     margin-bottom: 2.4rem; }
@@ -498,56 +516,52 @@ body {
     background-color: transparent;
     border: 0.1rem solid #23232A; }
   .container--border {
-    padding: calc(7.2rem + 8rem) 0 9.6rem;
+    padding: 7.2rem 0 9.6rem;
     border-left: 0.1rem solid #23232A;
     border-right: 0.1rem solid #23232A; }
     .container--border::before, .container--border::after {
       content: '';
       position: absolute;
-      top: 0; }
+      top: 0;
+      z-index: -1; }
     .container--border::before {
       height: 100%;
       width: 0.1rem;
       right: 41.9rem;
       background-color: #23232A; }
 
-.industries__info {
-  margin-bottom: 7.2rem; }
-
-.industries__swiper-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.industries__pagination {
-  color: #69696E;
-  width: max-content; }
-
-.industries__info {
-  display: grid;
-  grid-template-columns: 65.3rem repeat(2, 1fr);
-  column-gap: 4rem; }
-
-.industries__desc {
-  grid-column: 1 / -1; }
-
-.industries__list li {
-  margin-bottom: 3.2rem;
-  font-size: 2.4rem;
-  white-space: nowrap; }
-
-.industries__slider {
-  background-color: #05050D; }
-
-.industries__quote {
-  color: #ffffff;
-  margin-top: 4rem; }
-  .industries__quote blockquote {
-    column-count: 2;
+.industries {
+  padding: calc(7.2rem + 8rem) 0 0; }
+  .industries__info {
+    margin-bottom: 7.2rem; }
+  .industries__swiper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .industries__pagination {
+    color: #69696E;
+    width: max-content; }
+  .industries__info {
+    display: grid;
+    grid-template-columns: 65.3rem repeat(2, 1fr);
+    column-gap: 4rem; }
+  .industries__desc {
+    grid-column: 1 / -1; }
+  .industries__list li {
+    margin-bottom: 3.2rem;
     font-size: 2.4rem;
-    line-height: 3.6rem; }
-  .industries__quote figcaption {
-    margin-top: 3.2rem; }
+    white-space: nowrap; }
+  .industries__slider {
+    background-color: #05050D; }
+  .industries__quote {
+    color: #ffffff;
+    margin-top: 4rem; }
+    .industries__quote blockquote {
+      column-count: 2;
+      font-size: 2.4rem;
+      line-height: 3.6rem; }
+    .industries__quote figcaption {
+      margin-top: 3.2rem; }
 
 .studies__title {
   max-width: 99.8rem; }
