@@ -1,12 +1,6 @@
 .hero {
   padding: calc(6.8rem + 8rem) 0 7.2rem;
 
-  &__container {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-  }
-
   &__title {
     max-width: 68rem;
     margin-bottom: 2.4rem;
