@@ -1,6 +1,11 @@
 .industries {
   padding: calc(7.2rem + 8rem) 0 0;
 
+  .wrapper {
+    display: grid;
+    grid-template-rows: repeat(2, 50vh);
+  }
+
   &__info {
     margin-bottom: 7.2rem;
   }

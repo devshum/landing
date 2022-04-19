@@ -23,11 +23,17 @@
         fill: $primary;
       }
 
-      &__item a {
-        color: $primary;
-
+      &__item {
+        transition: $transition;
+        border-bottom: 0.1rem solid transparent;
+        
+        &.active,
         &:hover {
           border-bottom: 0.1rem solid $primary;
+        }
+
+        a {
+          color: $primary;
         }
       }
 

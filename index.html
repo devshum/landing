@@ -130,20 +130,27 @@
   
       <nav class="header__navigation">
         <ul class="header__list">
-          <li class="header__item">
-            <a href="#">About</a>
+          <li class="header__item about-tab">
+            <a href="#about">About</a>
           </li>
-          <li class="header__item">
-            <a href="#">Industries</a>
+          <li class="header__item industries-tab">
+            <a href="#industries">Industries</a>
           </li>
-          <li class="header__item">
-            <a href="#">Services</a>
+          <li class="header__item services-tab">
+            <a href="#services">Services</a>
           </li>
-          <li class="header__item">
-            <a href="#">Case Studies</a>
+          <li class="header__item studies-tab">
+            <a href="#studies">Case Studies</a>
           </li>
-          <li class="header__item">
-            <a href="#">Insights</a>
+          <li class="header__item insights-tab">
+            <a href="#insights">Insights</a>
+          </li>
+
+          <li class="header__item" style="display: none">
+            <a href="#hero">hero</a>
+          </li>
+          <li class="header__item" style="display: none">
+            <a href="#footer">Footer</a>
           </li>
         </ul>
   
@@ -152,8 +159,8 @@
     </div>
   </header>
 
-  <div class="scroll-page">
-    <section class="hero section section--dark section">
+  <div class="scroll-page" class="scroll-container">
+    <section data-anchor="hero" class="hero section section--dark section">
       <div class="container container--center container--border-hero">
         <h1 class="hero__title h-primary h-primary--small">Your product engineering partner</h1>
         <p class="hero__paragraph paragraph">From ideation to implementation and scaling, we help with transformations that effectively bridge your today with your tomorrow as you aspire it to be.</p>
@@ -183,7 +190,7 @@
       </div>
     </section>
   
-    <section class="about section">
+    <section data-anchor="about" class="about section">
       <div class="container container--center">
         <span class="section-description">Facts and figures</span>
         <h2 class="about__title h-secondary">
@@ -235,9 +242,9 @@
       </div>
     </section>
   
-    <section class="industries section">
+    <section data-anchor="industries" class="industries section">
       <div class="wrapper wrapper--center">
-        <div class="container">
+        <div class="container container--center">
           <div class="industries__info">
             <span class="industries__desc section-description">Facts and figures</span>
   
@@ -305,7 +312,7 @@
       </div>
     </section>
   
-    <section class="services section">
+    <section data-anchor="services" class="services section">
       <div class="container container--center">
         <h2 class="section-description">What we do</h2>
   
@@ -496,7 +503,7 @@
       </div>
     </section>
   
-    <section class="studies section section--dark">
+    <section data-anchor="studies" class="studies section section--dark">
       <div class="container container--center container--border">
         <span class="section-description section-description--white">Case studies</span>
         
@@ -570,7 +577,7 @@
       </div>
     </section>
   
-    <section class="insights section">
+    <section data-anchor="insights" class="insights section">
       
       <div class="container container--center">
         <span class="section-description">Insights</span>
@@ -626,9 +633,9 @@
 
     </section>
   
-    <section class="expertise section section--normal">
-      <div class="container">
-        <h2 class="expertise__title h-secondary">
+    <footer data-anchor="footer" class="footer section">
+      <div class="container container--center">
+        <h2 class="footer__title h-secondary">
           Empower your business with our technology expertise
         </h2>
   
@@ -639,9 +646,7 @@
           </svg>                     
         </button>
       </div>
-    </section>
-  
-    <footer class="footer section section--normal">
+      
       <div class="footer__container container">
         <ul class="footer__list">
           <li>
@@ -718,14 +723,10 @@
       </div>
     </footer>
   </div>
-
-
   
-  <!-- <script src="js/libs/anime.min.js"></script>
-  <script src="js/libs/animejsPlugins.js"></script> -->
-  <!-- <script src="js/libs/full-page-scroll.min.js"></script> -->
-  <!-- <script src="js/libs/fullPage.min.js"></script> -->
+  <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/scroll-page.js"></script>
   <script src="js/index.js"></script>
   <script src="js/industries.js"></script>
   <script src="js/services.js"></script>
@@ -733,22 +734,5 @@
   <script src="js/insights.js"></script>
   <script src="js/header.js"></script>
   <script src="js/popup.js"></script>
-  
-
-  <script>
-  // const scrollPage = document.querySelector('.scroll-page')
-  // scrollPage.style.paddingRight = scrollPage.offsetWidth - scrollPage.clientWidth + "px";
-
-
-  // animejsPlugins.scrollContainer({
-  //   sectionSelector: '.scrolled-section',
-  //   wrapperSelector: '.scroll-page',
-  //   duration: 700,
-  //   easing: 'easeInOutQuad'
-  // })
-
-
-  
-  </script> 
 </body>
 </html>
