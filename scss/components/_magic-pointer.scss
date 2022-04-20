@@ -1,0 +1,30 @@
+#magicPointer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 5rem !important;
+  width: 5rem !important;
+  background-color: transparent !important;
+  border: 0.1rem solid $white;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  z-index: 100;
+  position: relative;
+  transition: $transition;
+
+  &.is-hover {
+    height: 9.8rem !important;
+    width: 9.8rem !important;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 0.6rem;
+    width: 0.6rem;
+    background-color: $white;
+    border-radius: 50%;
+    display: block;
+  }
+}
