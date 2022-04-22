@@ -34,6 +34,7 @@
 
         a {
           color: $primary;
+
         }
       }
 
@@ -82,6 +83,7 @@
       border-bottom: 0.1rem solid transparent;
       transition: $transition;
       padding-bottom: 0.5rem;
+      cursor: none;
 
       &:hover {
         border-bottom: 0.1rem solid $white;
