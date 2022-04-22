@@ -10,15 +10,8 @@ body {
 .h-primary {
   color: $white;
   text-transform: uppercase;
-
-  &--small {
-    font-size: 5.6rem;
-    line-height: 6.7rem;
-  }
-
-  &--big {
-
-  }
+  font-size: 5.6rem;
+  line-height: 6.7rem;
 }
 
 .h-secondary {
@@ -28,6 +21,16 @@ body {
 
   &--white {
     color: $white;
+  }
+}
+
+.h-tertiary {
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  color: $white;
+
+  &--black {
+    color: $primary;
   }
 }
 
@@ -45,6 +48,15 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06rem;
+
+  &--white {
+    color: $white;
+  }
+}
+
+.description {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
 
   &--white {
     color: $white;
