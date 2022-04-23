@@ -30,6 +30,10 @@ a {
   &--dark {
     background-color: $primary;
   }
+  
+  &--black {
+    background-color: $black;
+  }
 
   &--normal {
     height: initial;

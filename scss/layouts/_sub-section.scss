@@ -1,0 +1,29 @@
+.sub-section {
+  padding: 9.6rem 0;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 30.6rem 1fr;
+    align-items: flex-start;
+    column-gap: 4rem;
+
+    margin-bottom: 7.2rem;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    row-gap: 6.4rem;
+  }
+
+  &__item {
+    svg {
+      margin-bottom: 1.6rem;
+    }
+
+    .h-tertiary {
+      margin-bottom: 0.8rem;
+    }
+  }
+}

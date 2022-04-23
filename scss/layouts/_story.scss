@@ -1,0 +1,70 @@
+.story {
+  color: $white;
+
+  &--purple {
+    background-color: #2A164E;
+  }
+
+  .container {
+    height: 100%;
+    padding: 9.6rem 0;
+    border-left: 0.1rem solid rgba($white, 0.12);
+    border-right: 0.1rem solid rgba($white, 0.12);
+
+    position: relative;
+
+    &::after {
+      content: '';
+      top: 0;
+      right: 41.9rem;
+      background-color: rgba($white, 0.12);
+      height: 100%;
+      width: 0.1rem;
+      position: absolute;
+      z-index: -1;
+    }
+
+    // &--border-hero {
+    //   &::after,
+    //   &::before {
+    //     height: 100%;
+    //     background-color: rgba($white, 0.12);
+    //     transform: unset;
+    //   }
+    // }
+  }
+
+  &__btn {
+    margin-top: 4.8rem;
+  }
+
+  &__title {
+    width: 99.8rem;
+  }
+
+  &__description {
+    max-width: 88.3rem;
+    margin: 3.2rem 0 0;
+  }
+
+  &__bg {
+    background: linear-gradient(180deg, #2A164E 0%, #381698 100%);
+
+    .container {
+      padding: unset;
+      
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__blockquote {
+    background-color: $primary;
+
+    .container {
+      padding: 9.6rem 0;
+    }
+  }
+}
